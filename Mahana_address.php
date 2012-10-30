@@ -149,10 +149,9 @@ class Mahana_address
 	 */
 	function _get_string($key)
 	{
-		if (!empty($this->address_array[$this->key_prefix.$this->internal_keys[$key]])) 
-			return $this->address_array[$this->key_prefix.$this->internal_keys[$key]] ;
-		else
-			return '';
+		return (empty($this->address_array[$this->key_prefix.$this->internal_keys[$key]])) ?			
+			'' :
+			$this->address_array[$this->key_prefix.$this->internal_keys[$key]];
 	}
 
 	/**
