@@ -125,10 +125,7 @@ class Mahana_address
 	 */
 	function _object_to_array($object)
 	{
-		$json  = json_encode($object);
-		$array = json_decode($json, true);
-
-		return $array;
+		return (is_object($object)) ? get_object_vars($object) : $object;
 	}
 
 	/**
