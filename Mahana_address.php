@@ -137,7 +137,7 @@ class Mahana_address
 	 */
 	function _set_address_array($address_array)
 	{
-		$this->address_array = (gettype($address_array) == 'object') ?  $this->_object_to_array($address_array): $this->address_array = $address_array;
+		$this->address_array = (is_object($address_array)) ?  $this->_object_to_array($address_array): $address_array;
 	}
 
 	/**
